@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaty: Next-Gen Chat</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div id="login-container" class="login-container glass-morphism">
+        <h1 class="neon-text">Chaty</h1>
+        <p class="subtitle">Next-Gen Chat Experience</p>
+        <form id="login-form">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="neon-button">Login</button>
+        </form>
+        <button id="login-theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div id="chat-container" class="chat-container glass-morphism hidden">
+        <div class="chat-header">
+            <h1 class="neon-text">Chaty</h1>
+            <h3 id="chat-header">Currently in chat: General</h3>
+            <button id="chat-theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="chat-body">
+            <form id="chatroom-selection">
+                <div class="input-group">
+                    <i class="fas fa-door-open"></i>
+                    <input type="text" id="chatroom" name="chatroom" placeholder="Enter new chatroom name" autocomplete="off">
+                </div>
+                <button type="submit" class="neon-button">Switch Room</button>
+            </form>
+            <div class="message-container">
+                <textarea class="messagearea" id="chatmessage" disabled readonly name="chatmessage" rows="4" placeholder="Welcome to the chat room. Messages will appear here."></textarea>
+            </div>
+            <form id="chatroom-message">
+                <div class="input-group">
+                    <i class="fas fa-comment"></i>
+                    <input type="text" id="message" name="message" placeholder="Type your message here" autocomplete="off">
+                </div>
+                <button type="submit" class="neon-button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
